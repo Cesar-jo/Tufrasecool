@@ -1,0 +1,368 @@
+        /*creamos un margen generar de la pagina*/
+        
+        * {
+            /*Ahora le quitaremos los margenes a la pagina, antes tenia este margen  y el padding
+    tambien le ponemos de 0px(margin: 10px;)*/
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        /*Aqui en el body le vamos asignar la tipografia de letra que va a llevar mi sitio web*/
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: rgb(253, 253, 253);
+        }
+        
+        a {
+            /*Aqui ponemos  las anclas que es para entrar a las anclas y ponemos que el texto
+sea text-decoration: none; para que no tenga la linea de abajo sin ninguna decoracion ningun texto
+que agregamos o iconos*/
+            text-decoration: none;
+        }
+        /*-----------------------------------Apartado padre------------------------------------------------------*/
+        /*Aqui ira todo el maquetado*/
+        
+        .padre {
+            display: flex;
+            /*con esto le decimos que se muestre en columnas todo el emaquetado del sitio web*/
+            flex-flow: column nowrap;
+        }
+        
+        .margen-interno {
+            padding: 0 50px;
+        }
+        /*Aqui en el header agregaremos una imagen que ira y abarcara todo el menu*/
+        
+        .header {
+            background: url(../img/volcan-erupcion.jpg);
+            background-position: center;
+            background-attachment: contain;
+            background-size: cover;
+            display: flex;
+            /*con esto le decimos que se muestre en columnas */
+            flex-flow: column nowrap;
+        }
+        /*-------------------------------Apartado menu------------------------------------------------------------*/
+        /*El apartado menu tendra este color que sera como asulado que sera el contorno 
+donde se aloga el logo de la pag,nav y social y le asignamos el color a las demas cajas qe seran logo de la pag,nav y social*/
+        
+        .menu {
+            background: rgba(0, 0, 0, .1);
+            display: flex;
+            /*Eto hara que el menu se muestre en columnas*/
+            flex-flow: nowrap;
+            /*Con el height le asignamos el tamaño, una altura establecida del menu*/
+            height: 50px;
+            /*Hesto hara que nuestro apartado de menu se nos muestre centrado*/
+            align-items: center;
+            /*Vamos a crear un border button para que se haga un lineado en el apartado menu*/
+            border-bottom: 1px solid rgba(255, 255, 255, .5);
+        }
+        
+        .logo {
+            /*Aqui le asignamos el tamaño y anchura de cada componente del menu en este caso seria del logo*/
+            flex: 1 1 auto;
+        }
+        /*Aqui le asignamos el color al logo y a su ancla entrando al logo ancla .logo a{ */
+        
+        .logo a {
+            color: #fff;
+            /*Con esta sentencia nos ayuda a darle tamaño a un boton o icono o texto*/
+            font-size: 30px;
+        }
+        /*Recuerda que los hover nos ayuda a que le asignemos un color a un boton o texto cuando pasemos sobre de el*/
+        
+        .logo a:hover {
+            color: salmon;
+        }
+        
+        .nav {
+            /*Aqui le asignamos el tamaño y anchura de cada componente del menu en este caso seria del navegador*/
+            flex: 5 1 auto;
+        }
+        /*Ahora entramos a nav pero a las anclas que creamos que son los iconos de redes sociales y menu etc.
+para cambiar su color y tamaño*/
+        
+        .nav a {
+            color: #fff;
+            font-size: 11px;
+            text-transform: uppercase;
+            padding: 0 10px;
+            letter-spacing: 2px;
+        }
+        
+        .nav a:hover {
+            color: salmon;
+        }
+        
+        .social {
+            /*Aqui le asignamos el tamaño y anchura de cada componente del menu en este caso seria del social*/
+            flex: 1 1 auto;
+            display: flex;
+        }
+        /*Ahora nos vamos a las anclas de social, 
+que ahi estan los iconos de las redes sociales y le vamos asignar un color*/
+        
+        .social a {
+            font-size: 18px;
+            color: #fff;
+            padding: 0 5px;
+        }
+        /*Ahora le creamos un hover al apartado de social para las redes sociales, 
+que el hover como ya lo hemos visto sirve para cuando pasemos el cursor sobre el icono o texto cambie de color*/
+        
+        .social a:hover {
+            color: #343434;
+        }
+        /*-------------------------------Apartado Texto principal--------------------------------------------------*/
+        /*Aqui le pondremos un contorno al texto principal y a donde se alojas el h1 que es el texto tambien otro contorno*/
+        
+        .texto-principal {
+            /*background: #f07b3f*/
+            height: 580px;
+            display: flex;
+            align-items: center;
+        }
+        /*Ahora a los h1 les agregaremos una topografia de letra y le cambiaremos su formato*/
+        
+        h1 {
+            font-family: 'Lora', serif;
+            font-size: 21px;
+            color: #fff;
+            font-weight: 300;
+            text-align: center;
+            line-height: 1.6;
+        }
+        /*-------------------------------Apartado navegacion--------------------------------------------------*/
+        
+        .navegacion {
+            background: #000;
+            flex: 1 1 100%;
+            margin: 10px 10px 0 0px;
+        }
+        /*-----------------------------------------------------------------------------------*/
+        /*Ahora le daremos forma al generador de frases*/
+        
+        h2 {
+            text-align: center;
+            padding: 30px;
+            background: #16123a;
+            color: #fff;
+            font-size: 2em;
+        }
+        /*con esto haremos que centre esos datos en medio de la pagina con un espacio de arriba y abajo como tambien de los lados*/
+        
+        .container {
+            padding: 20px;
+            background: #16123a;
+            border-radius: 8px;
+            width: 550px;
+            height: 370px;
+            box-shadow: 0px 10px 20px opx rgba(0, 0, 0, 0.25);
+            color: #fff;
+            position: absolute;
+            /*esto de abajo hara que esos datos se pocisiones en medio de la pagina con un espacio de arriva y abajo como en los lados del 50%*/
+            transform: translate(-50%, -50%);
+            top: 130%;
+            left: 50%;
+            font-size: 1.5em;
+        }
+        
+        .words {
+            background: #ffffff;
+            color: #000;
+            /*lo que hacen los pading es establece el espacio de relleno requerido por todos los lados de un elemento. en este caso son un espacio de 10px en todos los lados*/
+            padding: 10px;
+            border-radius: 5px;
+            height: 234px;
+            text-align: justify;
+        }
+        
+        .autor {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        
+        #generate-btn {
+            color: #fff;
+            background: #6c61cf;
+            margin-top: 40px;
+            width: 100%;
+            border-radius: 5px;
+            padding: 10px;
+            border: 2px solid#000;
+            cursor: pointer;
+            transition: .5s;
+            font-size: 1.2em;
+            outline: none;
+        }
+        
+        #generate-btn:hover {
+            background: #713296;
+            color: #fff;
+        }
+        /*--------------------------------------------------------------------------*/
+        
+        @media all and (max-width: 800px) {
+            .section {
+                flex-direction: column;
+            }
+            .menu {
+                flex-direction: column;
+                height: auto;
+            }
+            .aside {
+                display: flex;
+                justify-content: center;
+            }
+            .nav {
+                font-size: 5px;
+            }
+            .container {
+                position: absolute;
+                /*esto de abajo hara que esos datos se pocisiones en medio de la pagina con un espacio de arriva y abajo como en los lados del 50%*/
+                transform: translate(-50%, -50%);
+                top: 200%;
+                left: 50%;
+                font-size: 1.5em;
+            }
+            .words {
+                padding: 10px;
+                border-radius: 5px;
+                height: 234px;
+                text-align: justify;
+            }
+        }
+        
+        @media all and (max-width: 629px) {
+            .articulos {
+                flex-direction: column;
+            }
+            .container {
+                width: 490px;
+                height: 390px;
+                position: absolute;
+                /*esto de abajo hara que esos datos se pocisiones en medio de la pagina con un espacio de arriva y abajo como en los lados del 50%*/
+                transform: translate(-50%, -50%);
+                top: 200%;
+                left: 50%;
+                font-size: 1.5em;
+            }
+            .words {
+                padding: 10px;
+                border-radius: 5px;
+                height: 234px;
+                text-align: justify;
+            }
+            #generate-btn {
+                margin-top: 40px;
+                width: 100%;
+                border-radius: 5px;
+                padding: 10px;
+                border: 2px solid#000;
+                cursor: pointer;
+                transition: .5s;
+                font-size: 1.2em;
+                outline: none;
+            }
+        }
+        
+        @media all and (max-width: 559px) {
+            .articulos {
+                flex-direction: column;
+            }
+            .container {
+                width: 420px;
+                height: 480px;
+                position: absolute;
+                /*esto de abajo hara que esos datos se pocisiones en medio de la pagina con un espacio de arriva y abajo como en los lados del 50%*/
+                transform: translate(-50%, -50%);
+                top: 230%;
+                left: 50%;
+                font-size: 1.5em;
+            }
+            .words {
+                padding: 10px;
+                border-radius: 5px;
+                height: 300px;
+                text-align: justify;
+            }
+            #generate-btn {
+                margin-top: 40px;
+                width: 100%;
+                border-radius: 5px;
+                padding: 10px;
+                border: 2px solid#000;
+                cursor: pointer;
+                transition: .5s;
+                font-size: 1.2em;
+                outline: none;
+            }
+        }
+        
+        @media all and (max-width: 479px) {
+            .aside {
+                flex-direction: column;
+            }
+            .container {
+                width: 340px;
+                height: 500px;
+                position: absolute;
+                /*esto de abajo hara que esos datos se pocisiones en medio de la pagina con un espacio de arriva y abajo como en los lados del 50%*/
+                transform: translate(-50%, -50%);
+                top: 230%;
+                left: 50%;
+                font-size: 1.5em;
+            }
+            .words {
+                padding: 10px;
+                border-radius: 5px;
+                height: 444px;
+                text-align: justify;
+            }
+            #generate-btn {
+                margin-top: 40px;
+                width: 100%;
+                border-radius: 5px;
+                padding: 10px;
+                border: 2px solid#000;
+                cursor: pointer;
+                transition: .5s;
+                font-size: 1.2em;
+                outline: none;
+            }
+        }
+        
+        @media all and (max-width: 400px) {
+            .aside {
+                flex-direction: column;
+            }
+            .container {
+                width: 300px;
+                height: 500px;
+                position: absolute;
+                /*esto de abajo hara que esos datos se pocisiones en medio de la pagina con un espacio de arriva y abajo como en los lados del 50%*/
+                transform: translate(-50%, -50%);
+                top: 230%;
+                left: 50%;
+                font-size: 1.5em;
+            }
+            .words {
+                padding: 10px;
+                border-radius: 5px;
+                height: 444px;
+                text-align: justify;
+            }
+            #generate-btn {
+                margin-top: 40px;
+                width: 100%;
+                border-radius: 5px;
+                padding: 10px;
+                border: 2px solid#000;
+                cursor: pointer;
+                transition: .5s;
+                font-size: 1.2em;
+                outline: none;
+            }
+        }
